@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Last name</th>
     <th>Email</th>
     <th>Phone</th>
     <th></th>
@@ -13,8 +12,7 @@
 
 <% @people.each do |person| %>
   <tr>
-    <td><%= person.name %></td>
-    <td><%= person.last_name %></td>
+    <td><%="#{person.name} #{ person.last_name}"%></td>
     <td><%= person.email %></td>
     <td><%= person.phone %></td>
     <td><%= link_to 'Show', person %></td>
